@@ -1,20 +1,13 @@
 import React from 'react'
 import Link from 'next/link'
 import fetch from 'node-fetch'
+import Navbar from '../../components/Navbar'
 
 function Business({ newsUs, newsSg, newsId }) {
     return (
         <>
+            <Navbar />
             <div>Welcome to Business.js!</div>
-            <Link href="/">
-                <button>to home</button>
-            </Link>
-            <Link href="/technology">
-                <button>to technology</button>
-            </Link>
-            <Link href="/business">
-                <button>to business</button>
-            </Link>
             <Link href="/business/id">
                 <button>top in indo</button>
             </Link>

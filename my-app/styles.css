@@ -1,0 +1,25 @@
+ .navbar{
+    cursor: pointer;
+    position:fixed;
+    top: 0;
+    background-color: #ff8e00;
+    width: 100%;
+    border: 1px;
+    padding: 6px;
+    box-shadow: -4px -34px 51px 25px rgba(0,0,0,0.46);
+    z-index: 100;
+}
+.imgLogo{
+    height: 6vh;
+    width: 30vh;
+}
+.row{
+    margin: 5px;
+    display: flex;
+}
+.col{
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}

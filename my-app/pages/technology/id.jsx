@@ -6,15 +6,6 @@ function TechnologyId({ newsId }) {
     return (
         <>
             <div>Welcome to home.js!</div>
-            <Link href="/">
-                <button>to home</button>
-            </Link>
-            <Link href="/technology">
-                <button>to technology</button>
-            </Link>
-            <Link href="/business">
-                <button>to business</button>
-            </Link>
             <Link href="/technology/id">
                 <button>top in indo</button>
             </Link>

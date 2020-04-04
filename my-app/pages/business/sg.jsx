@@ -2,26 +2,17 @@ import React from 'react'
 import Link from 'next/link'
 import fetch from 'node-fetch'
 
-function TechnologySg({ newsSg }) {
+function BusinessSg({ newsSg }) {
     return (
         <>
             <div>Welcome to home.js!</div>
-            <Link href="/">
-                <button>to home</button>
-            </Link>
-            <Link href="/technology">
-                <button>to technology</button>
-            </Link>
-            <Link href="/business">
-                <button>to business</button>
-            </Link>
-            <Link href="/technology/id">
+            <Link href="/business/id">
                 <button>top in indo</button>
             </Link>
-            <Link href="/technology/sg">
+            <Link href="/business/sg">
                 <button>top in singapore</button>
             </Link>
-            <Link href="/technology/us">
+            <Link href="/business/us">
                 <button>top in amerika</button>
             </Link>
             <p style={{ color: "red" }}>
@@ -32,7 +23,7 @@ function TechnologySg({ newsSg }) {
 }
 
 export async function getStaticProps() {
-    const sg = await fetch('https://newsapi.org/v2/top-headlines?country=sg&category=technology&pagesize=8&apiKey=f45f90665ad844c984e0f6e6097475f9')
+    const sg = await fetch('https://newsapi.org/v2/top-headlines?country=sg&category=business&pagesize=8&apiKey=f45f90665ad844c984e0f6e6097475f9')
     const sgJson = await sg.json()
     return {
         props: {
@@ -41,4 +32,4 @@ export async function getStaticProps() {
     }
 }
 
-export default TechnologySg
+export default BusinessSg
