@@ -29,7 +29,7 @@ function BusinessUs({ newsUs }) {
                     cursor:pointer
                 }
                 .container{
-                    margin-top:10vh;
+                    margin-top:12vh;
                     padding-right: 15px;
                     padding-left: 15px;
                     margin-right: auto;
