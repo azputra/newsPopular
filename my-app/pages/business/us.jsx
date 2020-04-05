@@ -9,23 +9,6 @@ function BusinessUs({ newsUs }) {
         <>
             <Navbar />
             <div className="container">
-                <div className="row hot-news">
-                    <div className="col">
-                        <Link href="/business/id">
-                            <h3>Hot Business In Indonesia</h3>
-                        </Link>
-                    </div>
-                    <div className="col">
-                        <Link href="/business/sg">
-                            <h3>Hot Business In Singapore</h3>
-                        </Link>
-                    </div>
-                    <div className="col">
-                        <Link href="/business/us">
-                            <h3>Hot Business In United State</h3>
-                        </Link>
-                    </div>
-                </div>
                 <div className="row">
                     {
                         newsUs.articles.map((news, index) => {
@@ -83,7 +66,7 @@ function BusinessUs({ newsUs }) {
 }
 
 export async function getStaticProps() {
-    const us = await fetch('https://newsapi.org/v2/top-headlines?country=us&category=business&pagesize=8&apiKey=f45f90665ad844c984e0f6e6097475f9')
+    const us = await fetch('https://newsapi.org/v2/top-headlines?country=us&category=business&pagesize=8&apiKey=e29fa93344394a3ba440c5791ae8ad41')
     const usJson = await us.json()
     return {
         props: {

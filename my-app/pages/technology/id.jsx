@@ -9,23 +9,6 @@ function TechnologyId({ newsId }) {
         <>
             <Navbar />
             <div className="container">
-                <div className="row hot-news">
-                    <div className="col">
-                        <Link href="/technology/id">
-                            <h3>Hot Technology In Indonesia</h3>
-                        </Link>
-                    </div>
-                    <div className="col">
-                        <Link href="/technology/sg">
-                            <h3>Hot Technology In Singapore</h3>
-                        </Link>
-                    </div>
-                    <div className="col">
-                        <Link href="/technology/us">
-                            <h3>Hot Technology In United State</h3>
-                        </Link>
-                    </div>
-                </div>
                 <div className="row">
                     {
                         newsId.articles.map((news, index) => {
@@ -46,7 +29,7 @@ function TechnologyId({ newsId }) {
                     cursor:pointer
                 }
                 .container{
-                    margin-top:10vh;
+                    margin-top:12vh;
                     padding-right: 15px;
                     padding-left: 15px;
                     margin-right: auto;
@@ -83,7 +66,7 @@ function TechnologyId({ newsId }) {
 }
 
 export async function getStaticProps() {
-    const id = await fetch('https://newsapi.org/v2/top-headlines?country=id&category=technology&pagesize=8&apiKey=f45f90665ad844c984e0f6e6097475f9')
+    const id = await fetch('https://newsapi.org/v2/top-headlines?country=id&category=technology&pagesize=8&apiKey=e29fa93344394a3ba440c5791ae8ad41')
     const idJson = await id.json()
     return {
         props: {

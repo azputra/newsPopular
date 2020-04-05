@@ -77,9 +77,9 @@ function Technology({ newsUs, newsSg, newsId }) {
 
 
 export async function getStaticProps() {
-    const us = await fetch('https://newsapi.org/v2/top-headlines?country=us&category=technology&pagesize=1&apiKey=f45f90665ad844c984e0f6e6097475f9')
-    const sg = await fetch('https://newsapi.org/v2/top-headlines?country=sg&category=technology&pagesize=1&apiKey=f45f90665ad844c984e0f6e6097475f9')
-    const id = await fetch('https://newsapi.org/v2/top-headlines?country=id&category=technology&pagesize=1&apiKey=f45f90665ad844c984e0f6e6097475f9')
+    const us = await fetch('https://newsapi.org/v2/top-headlines?country=us&category=technology&pagesize=1&apiKey=e29fa93344394a3ba440c5791ae8ad41')
+    const sg = await fetch('https://newsapi.org/v2/top-headlines?country=sg&category=technology&pagesize=1&apiKey=e29fa93344394a3ba440c5791ae8ad41')
+    const id = await fetch('https://newsapi.org/v2/top-headlines?country=id&category=technology&pagesize=1&apiKey=e29fa93344394a3ba440c5791ae8ad41')
     const usJson = await us.json()
     const sgJson = await sg.json()
     const idJson = await id.json()
