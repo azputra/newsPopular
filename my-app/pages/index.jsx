@@ -1,13 +1,14 @@
 import React from 'react'
 import fetch from 'node-fetch'
-import Navbar from '../components/Navbar'
 import CardTrending1 from '../components/CardTrending1'
 import Card3Top from '../components/Card3Top'
+import Navbar from '../components/Navbar';
 
 function HomePage({ newsBsnsUs, newsTechUs, newsBsnsSg, newsTechSg, newsBsnsId, newsTechId }) {
     const randomIndex = Math.floor(Math.random() * 7) + 1
     const randomNews = Math.floor(Math.random() * 6)
     const topNews = [newsBsnsUs, newsTechUs, newsBsnsSg, newsTechSg, newsBsnsId, newsTechId]
+    const topTrending = topNews[randomNews].articles[randomIndex]
     return (
         <>
             <Navbar />
@@ -24,7 +25,7 @@ function HomePage({ newsBsnsUs, newsTechUs, newsBsnsSg, newsTechSg, newsBsnsId, 
                     </div>
                 </div>
                 <div className="row">
-                    <CardTrending1 TopNews={topNews[randomNews].articles[randomIndex]} />
+                    <CardTrending1 TopNews={topTrending} />
                 </div>
                 <div className="row">
                     <div className="col">

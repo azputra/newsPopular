@@ -1,7 +1,8 @@
-import React from 'react'
-import Link from 'next/link'
-import fetch from 'node-fetch'
-import Navbar from '../../components/Navbar'
+import React from 'react';
+import Link from 'next/link';
+import fetch from 'node-fetch';
+import Navbar from '../../components/Navbar';
+import CardDetail from '../../components/CardDetail';
 
 function Technology({ newsUs, newsSg, newsId }) {
     return (
@@ -12,22 +13,30 @@ function Technology({ newsUs, newsSg, newsId }) {
                 <div className="row hot-news">
                     <div className="col">
                         <Link href="/technology/id">
-                            <h3>Hot News In Indonesia</h3>
+                            <h3>Hot Technology In Indonesia</h3>
                         </Link>
                     </div>
                     <div className="col">
                         <Link href="/technology/sg">
-                            <h3>Hot News In Singapore</h3>
+                            <h3>Hot Technology In Singapore</h3>
                         </Link>
                     </div>
                     <div className="col">
                         <Link href="/technology/us">
-                            <h3>Hot News In United States</h3>
+                            <h3>Hot Technology In United State</h3>
                         </Link>
                     </div>
                 </div>
                 <div className="row">
-
+                    <div className="col">
+                        <CardDetail news={newsId.articles[0]} />
+                    </div>
+                    <div className="col">
+                        <CardDetail news={newsSg.articles[0]} />
+                    </div>
+                    <div className="col">
+                        <CardDetail news={newsUs.articles[0]} />
+                    </div>
                 </div>
             </div>
             <style jsx>{`
